@@ -9,7 +9,7 @@ controllers.controller('UploadController',['$scope', function($scope) {
 
   $scope.upload = function() {
     AWS.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
-    AWS.config.region = 'us-east-1';
+    AWS.config.region = 'us-east-2';
     var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
     
     if($scope.file) {
